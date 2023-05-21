@@ -18,7 +18,6 @@ export class YouTubeSearchBar extends Rect {
             layout: true,
             lineWidth: 10,
             minWidth: 1000,
-            padding: 40,
             radius: 100,
             stroke: "#ffffff",
         });

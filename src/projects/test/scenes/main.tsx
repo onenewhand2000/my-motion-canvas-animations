@@ -8,7 +8,7 @@ import { YouTubeSearchBar } from "../../../components/YouTubeSearchBar";
 export default makeScene2D(function* (view) {
     let ref = createRef<YouTubeSearchBar>();
     view.add(<YouTubeSearchBar ref={ref} />);
-    view.add(<Pointer />);
+    // view.add(<Pointer />);
 
     yield* ref().type("LLLLLLLLLLLLLLLLLLLLLLLL");
 
