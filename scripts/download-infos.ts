@@ -1,8 +1,9 @@
-const fs = require("node:fs");
-const { Readable } = require("node:stream");
-const path = require("path");
-const { glob } = require("glob");
-const axios = require("axios");
+// @ts-nocheck
+import fs from "node:fs";
+import { Readable } from "node:stream";
+import path from "node:path";
+import { glob } from "npm:glob";
+import axios from "npm:axios";
 
 glob("**/*.info").then((v) => {
     v.forEach((p) => {
@@ -11,10 +12,7 @@ glob("**/*.info").then((v) => {
                 const writeStream = fs.createWriteStream(
                     path.join(path.dirname(p), path.basename(p, ".info"))
                 );
-                /**
-                 * @type { Readable }
-                 */
-                let stream = r.data;
+                let stream: Readable = r.data;
                 stream.pipe(writeStream);
             });
         });
