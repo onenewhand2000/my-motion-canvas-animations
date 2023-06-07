@@ -3,7 +3,7 @@
     "private": true,
     "version": "0.0.0",
     "scripts": {
-        "download-infos": "deno run -A ./scripts/download-infos.ts",
+        "download-infos": "node ./scripts/download-infos.cjs",
         "serve": "vite",
         "build": "tsc && vite build"
     },
